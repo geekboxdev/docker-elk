@@ -5,7 +5,7 @@ services:
     container_name: elastic
     environment:
       discovery.type: single-node
-      ELASTIC_PASSWORD: password
+      ELASTIC_PASSWORD: ${ELASTIC_PASSWORD}
       # LS_JAVA_OPTS: -Xmx512m -Xms512m
     volumes:
       - ./config/elastic.yml:/usr/share/elasticsearch/config/elasticsearch.yml
